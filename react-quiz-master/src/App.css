@@ -32,3 +32,23 @@ label.radio+.radio {
 label.radio input {
   margin-right: 10px;
 }
+.Header {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: top;
+  align-items: baseline;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: rgb(233, 238, 241);
+  color: #fff;
+  position: 'top';
+  top: top();    
+  left: left() ; 
+}
+.main{
+height: 100vh;
+position: 'center';
+justify-content: center;
+display: flex;
+}

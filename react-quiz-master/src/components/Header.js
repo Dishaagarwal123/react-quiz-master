@@ -2,6 +2,7 @@ import React from 'react'
 
 const Header = () => {
     return (<>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="text-center bg-light my-3">
       <ul className="nav nav-tabs" id="myTab" role="tablist">
   <li className="nav-item" role="presentation">
@@ -20,6 +21,7 @@ const Header = () => {
   <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
 </div>
       </div>
+      </nav>
 </>
     )
 }

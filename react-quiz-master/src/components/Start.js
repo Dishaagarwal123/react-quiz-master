@@ -5,21 +5,22 @@ import Advertisement from './Advertisement'
 const Start = ({ onQuizStart }) => {
   let MainStyle={
     margin:"3px",
-    position:"absolute",
-    left:"15vh",
+    //  height: "80vh",
+     position:"absolute",
+    right:"15vh",
     top:"10vh"}
 
     let Subject = {
-      position: "Absolute",
+       position: "Absolute",
       display: "inline-block",
-      left: "10vh",
+      right: "10vh",
       margin: "30px",
       width: "60vh",
       top: "20vh"
   }
 
   return(
-    <div>
+    <div className="main">
             <h1 style={MainStyle}><b>Welcome to the Quiz</b></h1>
             <img src="IMG_20210215_082119_1.jpg" alt="" />
             <div style={Subject}>

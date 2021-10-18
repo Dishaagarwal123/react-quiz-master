@@ -45,7 +45,7 @@ const App = () => {
   return (
 
     <div className="App">
-      <Header/>
+      <div className="Header"><Header/></div>
       {/* <Contact/> */}
       {step === 1 && <Start onQuizStart={quizStartHandler} />}
       {/* {step === 1 && <Subject onQuizStart={quizStartHandler}/>} */}
