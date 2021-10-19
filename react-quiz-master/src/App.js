@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-// import Contact from './pages/Contact';
+import Home from "./components/Home";
  import Start from './components/Start';
+  // import Profile from "./pages/Profile";
+ import Contactus from "./pages/Contact";
 import Question from './components/Question';
 import End from './components/End';
 import Modal from './components/Modal';
 import quizData from './data/quiz.json';
-import Footer from './components/Footer';
-import Header from './components/Header';
+// import Footer from './components/Footer';
+// import Header from './components/Header';
 // import Main from './components/Main';
 // import Subject from './components/Subject';
 let interval;
@@ -45,8 +48,16 @@ const App = () => {
   return (
 
     <div className="App">
-      <div className="Header"><Header/></div>
-      {/* <Contact/> */}
+      {/* <div className="Header"><Header/></div> */}
+      <div className='left section'>
+        <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        {/* <Route path="/Profile" component={Profile}></Route> */}
+        <Route path="/Contact" component={Contactus}></Route>
+       </Switch>
+       </BrowserRouter>
+      </div>
       {step === 1 && <Start onQuizStart={quizStartHandler} />}
       {/* {step === 1 && <Subject onQuizStart={quizStartHandler}/>} */}
       {step === 2 && <Question 
@@ -71,7 +82,7 @@ const App = () => {
         data={quizData.data}
       />}
     
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
